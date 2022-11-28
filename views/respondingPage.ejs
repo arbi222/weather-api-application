@@ -1,0 +1,52 @@
+<%- include('partials/header') %>
+
+    <title><%= title %> Weather</title>
+
+    <style>
+        body{
+            background-image: url("<%= weatherPictureUrl %>");
+        }
+    </style>
+
+    <div id="weather-container">
+        <h1 id="temperature"><%= temperature %>°C</h1>
+        <div>
+            <h2 id="city"><%= city %></h2>
+            <p id="date"><%= date %></p>
+        </div>
+        <div class="img-desc">
+            <img src=<%= imageUrl %>>
+            <p><%= description %></p>
+        </div>
+    </div>
+
+    <div class="second-section">
+        <h1 id="more-details-h1">The weather in more detail</h1>
+    
+        <div id="second-weather-section">
+            <div class="weather-section-child">
+                <h2>Feels like</h2>
+                <p><%= feels_like %>°C</p>
+            </div>
+            <div class="weather-section-child">
+                <h2>Wind speed</h2>
+                <p><%= wind_speed %> m/s</p>
+            </div>
+            <div class="weather-section-child">
+                <h2>Humidity</h2>
+                <p><%= humidity %>%</p>
+            </div>
+            <div class="weather-section-child">
+                <h2>Pressure</h2>
+                <p><%= pressure %> hPa</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="second-section">
+        <form action="/" method="get">
+            <input id="back-button" type="submit" value="Find Another Location">
+        </form>
+    </div>
+
+<%- include('partials/footer') %>

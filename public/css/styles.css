@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    line-height: 1.5rem;   
+}
+
+body{
+    background-image: url("../images/weather.jpg");
+    background-size: inline; 
+}
+
+#main-container{
+    max-width: 900px;
+	margin: 0 auto;
+    text-align: center;
+}
+
+h1, h2{
+    font-family: 'Russo One', sans-serif;
+    font-weight: 500;
+    line-height: normal;
+    color: black;
+}
+
+h1#main-h1{
+    font-size: 3.5rem;
+}
+
+#cityName-input{
+    height: 3rem;
+    width: 22rem;
+    font-size: 1.4rem;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0 auto;
+    background-color: transparent;
+    border: none;
+}
+
+#cityName-input:focus{
+    outline: none;
+    border-bottom: 3px solid #216eeb;
+}
+
+#submit-button{
+    height: 3rem;
+    font-size: 1.4rem;
+    font-family: 'Roboto Mono', monospace;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    
+}
+
+#submit-button:hover{
+    background-color: #3569bd;
+}
+
+p{
+	font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+#weather-container{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+h1#temperature{
+    font-size: 10rem;
+}
+
+h2#city{
+    font-size: 4rem;
+    margin: 0 auto;
+}
+
+p#date{
+    margin-top: 30px;
+}
+
+.img-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-desc p{
+    margin-top: 6px;
+    text-align: center;
+}
+
+.second-section{
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#second-weather-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.weather-section-child{
+    flex-direction: column;
+}
+
+#back-button{
+    width: 15rem;
+    height: 4rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+#back-button:hover{
+    background-color: #3569bd;
+    cursor: pointer;
+}
+
+
+@media(max-width: 850px){
+
+    h1#main-h1{
+        font-size: 2rem;
+    }
+
+    h1#temperature{
+        font-size: 7rem;
+    }
+
+}
+
+@media(max-width: 750px){
+
+    #weather-container{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #temperature{
+        margin: 0 auto;
+    }
+
+    #date{
+        text-align: center;
+    }
+}

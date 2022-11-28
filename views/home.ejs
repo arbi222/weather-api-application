@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+    <title>Weather</title>
+
+    
+    <div id="main-container">
+
+        <h1 id="main-h1">See the weather of your favourite city in real time.</h1>
+
+
+        <form action="/" method="post">
+            <input type="text" name="cityName" id="cityName-input" placeholder="Enter your location...">  
+            <button type="submit" id="submit-button">🔍</button>
+            <% if (temp === undefined){ %>
+                <p>Please write the name of your location correctly.</p>
+             <% } %> 
+        </form>
+
+    </div>
+    
+<%- include('partials/footer') %>
