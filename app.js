@@ -99,8 +99,8 @@ app.post("/" , function(req, res){
       
 });
 
-const backendUrl = "https://weshare-server.onrender.com";
-const job = new cron.CronJob('*/8 * * * *', function(){
+const backendUrl = "https://weatherlive-9kk4.onrender.com";
+const job = new cron.CronJob('*/14 * * * *', function(){
   https.get(backendUrl, (res) => {
     if (res.statusCode === 200){
       console.log("server restarted")
