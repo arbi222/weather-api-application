@@ -2,6 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const https = require("https");
 const bodyParser = require("body-parser");
+const cron = require("cron");
+const https = require("https");
 
 const app = express();
 
@@ -97,6 +99,17 @@ app.post("/" , function(req, res){
       
 });
 
+const backendUrl = "https://weshare-server.onrender.com";
+const job = new cron.CronJob('*/8 * * * *', function(){
+  https.get(backendUrl, (res) => {
+    if (res.statusCode === 200){
+      console.log("server restarted")
+    }
+  }).on("error", (err) => {
+      console.log("error");
+  })
+})
+job.start();
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Server is running successfully !");
