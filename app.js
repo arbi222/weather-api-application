@@ -99,17 +99,17 @@ app.post("/" , function(req, res){
       
 });
 
-const backendUrl = "https://weatherlive-9kk4.onrender.com";
-const job = new cron.CronJob('*/10 * * * *', function(){
-  https.get(backendUrl, (res) => {
-    if (res.statusCode === 200){
-      console.log("server restarted")
-    }
-  }).on("error", (err) => {
-      console.log("error");
-  })
-})
-job.start();
+// const backendUrl = "https://weatherlive-9kk4.onrender.com";
+// const job = new cron.CronJob('*/10 * * * *', function(){
+//   https.get(backendUrl, (res) => {
+//     if (res.statusCode === 200){
+//       console.log("server restarted")
+//     }
+//   }).on("error", (err) => {
+//       console.log("error");
+//   })
+// })
+// job.start();
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Server is running successfully !");
